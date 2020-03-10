@@ -1,0 +1,41 @@
+body {
+  background-image: url("./messy-bg.jpg");
+  background-position: center;
+}
+
+.key {
+  border: 4px rgba(255, 127, 80, 0.479) solid;
+  border-radius: 5px;
+  margin: 1rem;
+  transition: all 0.07s;
+  text-align: center;
+  width: 100px;
+  padding: 1rem 0.5rem;
+  background-color: rgba(32, 32, 32, 0.774);
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: cornsilk;
+  box-shadow: 0px 0px 10px gray;
+}
+
+kbd {
+  display: block;
+  font-size: 40px;
+  color: white;
+}
+
+.sound {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.7rem;
+  color: azure;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.keys {
+  display: flex;
+  margin-top: 50vh;
+  justify-content: center;
+}
