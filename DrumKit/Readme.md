@@ -5,7 +5,9 @@
 ### Description
 
 Built with Vanilla JavaScript , HTML and CSS.
-**Key words and topics learned** :
+
+
+**Key words and topics learned** : <br>
 
 _data-attributes_ ,
 _classList - add/remove/toggle_,
