@@ -1,0 +1,35 @@
+body {
+  background-color: rgb(206, 206, 137);
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+}
+.hand {
+  width: 50%;
+  height: 6px;
+  background-color: rgb(71, 70, 70);
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.26, 1.07, 0.58, 1);
+}
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px);
+}
+.clock {
+  background-color: inherit;
+  padding: 2rem;
+  border-radius: 50%;
+  border: 10px solid white;
+  box-shadow: 0px 2px 4px silver;
+  width: 30rem;
+  height: 30rem;
+  margin: 50px auto;
+  position: relative;
+}
