@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Variable and JS</title>
+
+    <style>
+      :root {
+        --base: #fbfbfb;
+        --blur: 0px;
+        --spacing: 30px;
+      }
+      body {
+        text-align: center;
+      }
+
+      body {
+        color: aliceblue;
+        background-color: #2b5f85;
+        font-size: 35px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .controls {
+        margin-bottom: 40px;
+      }
+      img {
+        filter: blur(var(--blur));
+        background-position: center;
+        height: 400px;
+        position: relative;
+        width: 800px;
+        padding: var(--spacing);
+        background-color: var(--base);
+      }
+
+      .hl {
+        color: var(--base);
+      }
+    </style>
+  </head>
+  <body>
+    <h4>Updates CSS variables with <span class="hl">JS</span></h4>
+    <div class="controls">
+      <label for="spacing">Spacing</label>
+      <input
+        type="range"
+        name="spacing"
+        min="10"
+        max="200"
+        value="10"
+        data-sizing="px"
+      />
+
+      <label for="blur">Blur</label>
+      <input
+        type="range"
+        name="blur"
+        min="0"
+        max="25"
+        value="10"
+        data-sizing="px"
+      />
+
+      <label for="base">Base Color</label>
+      <input type="color" name="base" value="#fbfbfbf" />
+    </div>
+
+    <img src="bz_rj.jpg" alt="Rio de Janeiro" />
+
+    <script>
+      var inputs = document.querySelectorAll(".controls input");
+
+      function handleUpdate() {
+        const suffix = this.dataset.sizing || "";
+        document.documentElement.style.setProperty(
+          `--${this.name}`,
+          this.value + suffix
+        );
+      }
+      inputs.forEach(input => input.addEventListener("change", handleUpdate));
+      inputs.forEach(input =>
+        input.addEventListener("mousemove", handleUpdate)
+      );
+    </script>
+  </body>
+</html>
