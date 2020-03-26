@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="tip-calculator">
+      <header>
+        <h1>Tip Calculator</h1>
+      </header>
+
+      <div class="bill">
+        <label for="bill">Check $:</label>
+        <input type="text" name="billAmount" id="billAmount" />
+      </div>
+      <div class="percentages">
+        <label class="container" for="15%"
+          >15%
+          <input checked="checked" type="radio" name="tip" value="15" />
+        </label>
+        <label class="container" for="20%"
+          >20%
+          <input type="radio" name="tip" value="20" />
+        </label>
+        <label class="container" for="25%"
+          >25%
+          <input type="radio" name="tip" value="25" />
+        </label>
+      </div>
+      <div>
+        <h5 id="tip-result"></h5>
+        <h5 class="total"></h5>
+      </div>
+      <div class="button-div">
+        <button type="button" class="button-check" id="button">
+          <i class="fas fa-check"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="app.js
+   "></script>
+    <script
+      src="https://kit.fontawesome.com/9b22d73af0.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
